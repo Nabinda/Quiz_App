@@ -34,13 +34,14 @@ class _QuizPageState extends State<QuizPage> {
   List<Widget> scoreKeeper = [];
   bool userAnswer;
   int score = 0;
+  int question = questionBrain.questionNumber();
   void answerCheck(bool userAnswer) {
     setState(() {
       if (questionBrain.isFinished()) {
         Alert(
             context: context,
             title: "The Number of questions are finished",
-            desc: "You Have Scored $score Questions",
+            desc: "You Have Scored $score Questions Out of $question",
             buttons: [
               DialogButton(
                   child: Text(

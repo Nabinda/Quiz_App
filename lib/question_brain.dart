@@ -57,4 +57,8 @@ class QuestionBrain {
   void reset() {
     _questionNumber = 0;
   }
+
+  int questionNumber() {
+    return _questions.length;
+  }
 }
